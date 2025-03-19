@@ -14,7 +14,7 @@ const Homepage = () => {
   return (
     <>
     <Navbarcomponent/>
-    <div className='container'>
+    <div className='container' style={{marginRight:"75px"}}>
         <div className='row'>
           {
           cardData && cardData.map((data,index)=>(
