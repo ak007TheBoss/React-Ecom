@@ -4,6 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const cartsumSlice = createSlice({
     name:'CartSum',
     initialState:{
+    cartData : [],
     cartnum : 0
     },
     reducers:{

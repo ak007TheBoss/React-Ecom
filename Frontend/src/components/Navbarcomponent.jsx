@@ -58,9 +58,10 @@ const Navbarcomponent = () => {
             </svg></button>
             </div>
             <div className='col-md-4 my-3 d-flex justify-content-end'>
-          <div className="relative w-10 h-10 flex items-center justify-center">
+             <Link to='/cart'> <button className='btn btn-success'>Cart : {cartnum}</button></Link>
+          {/* <div className="relative w-10 h-10 flex items-center justify-center">
               <CartIcon/>
-            </div>
+            </div> */}
             </div>
           
         </div>

@@ -7,7 +7,9 @@ const Homepage = () => {
     const dispatch = useDispatch()
     const cartsum = useSelector((state)=>state.cartsum.cartnum)
     const sendcartData =()=>{
-      dispatch(sum(1))
+      dispatch(sum(1)
+    
+    )
     }
 
     const cardData = useSelector((state)=>state.carddatashow.showData)

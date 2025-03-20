@@ -72,6 +72,20 @@ const pushdataSLice = createSlice({
                 onstock: false,
                 img: "https://m.media-amazon.com/images/I/61XtQfb-sRL._AC_SL1000_.jpg"
             },
+            {
+                id:11,
+                name:"Laptop",
+                price: "10000",
+                onstock: false,
+                img: "https://m.media-amazon.com/images/I/61XtQfb-sRL._AC_SL1000_.jpg"
+            },
+            {
+                id:12,
+                name:"Laptop",
+                price: "10000",
+                onstock: false,
+                img: "https://m.media-amazon.com/images/I/61XtQfb-sRL._AC_SL1000_.jpg"
+            },
             
         ]
     }
