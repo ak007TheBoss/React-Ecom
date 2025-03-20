@@ -18,7 +18,6 @@ const Homepage = () => {
         <div className='row'>
           {
           cardData && cardData.map((data,index)=>(
-              <>
               <div className='col-md-4 my-3' key={index}>
                 <div className='card p-3'style={{width:"20rem"}} >
                     <img src={data.img} alt="" />
@@ -40,7 +39,7 @@ const Homepage = () => {
                         </div>
                 </div>
               </div>        
-              </>
+              
           ))
 
           }
