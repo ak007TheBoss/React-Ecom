@@ -10,9 +10,14 @@ const cartsumSlice = createSlice({
     reducers:{
         sum:(state,action)=>{
             state.cartnum += action.payload
+        },
+
+        cartdata:(state,action)=>{
+            console.log(action.payload)
+            state.cartData.push(action.payload)
         }
     }
 
 })
-export const{sum} = cartsumSlice.actions
+export const{sum,cartdata} = cartsumSlice.actions
 export default cartsumSlice.reducer

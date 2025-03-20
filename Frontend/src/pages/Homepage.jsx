@@ -2,14 +2,12 @@ import React, { useState } from 'react'
 import Navbarcomponent from '../components/Navbarcomponent'
 import '../css/homepage.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { sum } from '../slices/cartsumSlice'
+import { sum,cartdata } from '../slices/cartsumSlice'
 const Homepage = () => {
     const dispatch = useDispatch()
-    const cartsum = useSelector((state)=>state.cartsum.cartnum)
-    const sendcartData =()=>{
-      dispatch(sum(1)
-    
-    )
+    const sendcartData =(data)=>{
+      dispatch(sum(1))
+      dispatch(cartdata(data))
     }
 
     const cardData = useSelector((state)=>state.carddatashow.showData)
@@ -36,7 +34,7 @@ const Homepage = () => {
                           <h1>Aailable:{data.onstock}</h1>
                         </div>
                         <div>
-                        <button className='btn btn-success' onClick={sendcartData}>Add to cart</button>
+                        <button className='btn btn-success' onClick={()=>sendcartData(data)}>Add to cart</button>
                         </div>
                         </div>
                 </div>
