@@ -32,6 +32,11 @@ const Products = () => {
           </div>
         </div>
       </div> 
+      
+      <div className='container'>
+        
+
+      </div>
     </>
 
   )

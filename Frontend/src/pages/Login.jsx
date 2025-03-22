@@ -1,8 +1,34 @@
 import React from 'react'
-
+import Navbarcomponent from '../components/Navbarcomponent'
 const Login = () => {
   return (
-    <div>Login</div>
+    <>
+    <Navbarcomponent/>
+      <div className='container d-flex justify-content-center'>
+        <div className=''>
+ 
+            <label htmlFor="name">First Name</label>
+            <input type="text" name="name" id="" placeholder='Name' className='form-control'/>
+          </div>
+          <div className='d-block'>
+            <label htmlFor="name">First Name</label>
+            <input type="text" name="name" id="" placeholder='Name' className='form-control'/>
+          </div>
+          <div className='d-block'>
+            <label htmlFor="name">First Name</label>
+            <input type="text" name="name" id="" placeholder='Name' className='form-control'/>
+          </div>
+          <div className='d-block'>
+            <label htmlFor="name">First Name</label>
+            <input type="text" name="name" id="" placeholder='Name' className='form-control'/>
+          </div>
+          <div className='d-block'>
+            <label htmlFor="name">First Name</label>
+            <input type="text" name="name" id="" placeholder='Name' className='form-control'/>
+          </div>
+        </div>
+    </>
+
   )
 }
 
