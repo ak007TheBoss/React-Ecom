@@ -101,8 +101,10 @@ const pushdataSLice = createSlice({
                 img: "https://m.media-amazon.com/images/I/71FSIp+tDNL._AC_UF894,1000_QL80_.jpg",
                 details: "keyboard"
             },
+
             
-        ]
+        ],
+        
     }
 
 })

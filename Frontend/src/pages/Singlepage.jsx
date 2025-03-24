@@ -10,19 +10,17 @@ const Singlepage = () => {
         const subquantity=()=>[
             setquantity(quantity-1)
         ]
-    const singleproductData = useSelector((state)=>state.singleproduct.singleData)
+    const data = useSelector((state)=>state.singleproduct.singleData)
   return (
     <>
     <Navbarcomponent/>
     <div className='container shadow-lg'>
         <div className='row my-3'>
-            {
-                singleproductData && singleproductData.map((data,index)=>(
-                    <>
-                        <div className='col-md-6 my-3' key={data.id}>
+            
+                        <div className='col-md-6 my-3'>
                             <img src={data.img} style={{width:"30rem"}} />
                         </div>
-                        <div className='col-md-6 my-3' key={data.id}>
+                        <div className='col-md-6 my-3'>
                             <h1>{data.name}</h1>
                             <h3>{data.price}</h3>
                             <h3>{data.ontock}</h3>
@@ -40,9 +38,9 @@ const Singlepage = () => {
                                 <button className='ms-3 btn btn-secondary'>Add to cart</button>
                             </div>
                         </div>
-                    </>
-                ))
-            }
+                
+        
+            
         </div>
     </div>
     </>

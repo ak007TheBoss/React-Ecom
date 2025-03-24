@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const singlepageSlice = createSlice({
     name:'singlepage',
     initialState:{
-        singleData:[],    
+        singleData:{},    
     },
     reducers:{
         showsingleData:(state,action)=>{
-            state.singleData.push(action.payload) 
+            state.singleData = action.payload 
         }
     }
 })

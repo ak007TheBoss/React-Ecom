@@ -1,15 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Navbarcomponent from '../components/Navbarcomponent'
 import '../css/products.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartdata, sum } from '../slices/cartsumSlice'
 import { Link } from 'react-router-dom'
 import { showsingleData } from '../slices/singlepageSlice'
+
 const Products = () => {
-
+  const [searchData,setSearchData] = useState("")
   const cardData = useSelector((state)=>state.carddatashow.showData)
-
-  const searchdata = useSelector((state)=>state.searchdata.searchdata)
+  const [searchproducts,setSearchProducts] = useState(cardData)
   
   const dispatch = useDispatch()
   const sendcartData =(data)=>{
@@ -17,9 +17,14 @@ const Products = () => {
     dispatch(cartdata(data))
   }
   const searchdatas = () =>{
-    console.log("yessir")
-  }
+    console.log("hello",searchData)
+    let filterData = cardData.filter(data=>
+      data.name.toLowerCase().includes(searchData.toLowerCase())
 
+    )
+    setSearchProducts(filterData)
+    
+  }
       const singleData = (data)=>{
         dispatch(showsingleData(data))
       }
@@ -32,9 +37,9 @@ const Products = () => {
 
           <div className='col-md-3'>
             <div className='my-3 d-flex justify-content-evenly'>
-              <input type="text" name="" id="" placeholder='Search our products' className='form-control'/>
+              <input type="text" name="" id="" placeholder='Search our products' className='form-control' onChange={(e)=>setSearchData(e.target.value)}/>
               <button className='btn btn-success ms-2' 
-              onClick={()=>searchdatas}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
+              onClick={searchdatas}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
             </svg></button>
             </div>
@@ -64,7 +69,7 @@ const Products = () => {
           <div className='col-md-9'>
             <div className='row'>
             {
-              cardData && cardData.map((data,index)=>(
+              searchproducts && searchproducts.map((data,index)=>(
                   <div className='col-md-4 my-3' key={index}>
                   <div className='card p-3'style={{width:"15rem"}}>
                         <img src={data.img} alt="" style={{height:"200px",width:"100%"}}/>
