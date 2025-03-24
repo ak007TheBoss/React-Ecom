@@ -24,7 +24,7 @@ const Singlepage = () => {
                             <h1>{data.name}</h1>
                             <h3>{data.price}</h3>
                             <h3>{data.ontock}</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dolorum nisi inventore nulla incidunt laborum facilis laboriosam corporis, iure optio corrupti, iste blanditiis sequi explicabo doloribus aliquam deleniti ipsam reprehenderit?</p>
+                            <p>{data.specifications}</p>
                             <div className='p-3'>
                                     <h3>No. Items,</h3>
                                     <div className='d-flex justify-content-start'>
