@@ -7,7 +7,7 @@ const Navbarcomponent = () => {
   return (
     <>
     <div className=' container-fluid bg-black'>
-    <div className="navbar position-sticky top-0 z-1">
+    <div className="navbar position-sticky top-0 z-1 nav">
       <div className="col-md-4">
         <div className="d-flex  px-3">
             <img src={logo} alt="" style={{height:"75px",width:"75px"}} />
