@@ -1,8 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import CartIcon from './Carticon'
-
 const Navbarcomponent = () => {
   const cartnum = useSelector((state)=>state.cartsum.cartnum)
   return (
