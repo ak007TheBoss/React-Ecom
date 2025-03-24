@@ -1,15 +1,16 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import logo from '../imgs/logo.jpg'
 const Navbarcomponent = () => {
   const cartnum = useSelector((state)=>state.cartsum.cartnum)
   return (
     <>
     <div className=' container-fluid bg-black'>
-    <div className="navbar">
+    <div className="navbar position-sticky top-0 z-1">
       <div className="col-md-4">
         <div className="d-flex  px-3">
-            <h1 className='text-white'>Name</h1>
+            <img src={logo} alt="" style={{height:"75px",width:"75px"}} />
         </div>
       </div>
       <div className="col-md-4">
