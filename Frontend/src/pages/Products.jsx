@@ -3,10 +3,13 @@ import Navbarcomponent from '../components/Navbarcomponent'
 import '../css/products.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartdata, sum } from '../slices/cartsumSlice'
+import { Link } from 'react-router-dom'
 const Products = () => {
 
   const cardData = useSelector((state)=>state.carddatashow.showData)
+
   const searchdata = useSelector((state)=>state.searchdata.searchdata)
+  
   const dispatch = useDispatch()
   const sendcartData =(data)=>{
     dispatch(sum(1))
@@ -15,6 +18,10 @@ const Products = () => {
   const searchdatas = () =>{
     console.log("yessir")
   }
+
+  const cardclick=()=>[
+    console.log("card clicked")
+  ]
   return (
     <>
 
@@ -59,26 +66,26 @@ const Products = () => {
             {
               cardData && cardData.map((data,index)=>(
                   <div className='col-md-4 my-3' key={index}>
-                    <div className='card p-3'style={{width:"15rem"}} >
-                        <img src={data.img} alt="" />
+                  <div className='card p-3'style={{width:"15rem"}}>
+                        <img src={data.img} alt="" style={{height:"200px",width:"100%"}}/>
                         <hr />
                             <div className='card-body'>
                               <div>
-                              <h3>Name:{data.name}</h3>
+                              <h5>Name:{data.name}</h5>
                               </div>
 
                             <div>
-                                <h3>Price:{data.price}</h3>
+                                <h5>Price:{data.price}</h5>
                             </div>
                             <div>
-                              <h3>Aailable:{data.onstock}</h3>
+                              <h5>Aailable:{data.onstock}</h5>
                             </div>
                             <div>
                             <button className='btn btn-success' onClick={()=>sendcartData(data)}>Add to cart</button>
                             </div>
                             </div>
                     </div>
-                  </div>        
+                  </div>      
               
           ))
 
@@ -86,7 +93,7 @@ const Products = () => {
             </div>
           </div>
           </div>
-        </div>
+          </div>
 
     </>
 

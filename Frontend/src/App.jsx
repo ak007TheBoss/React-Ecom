@@ -7,6 +7,7 @@ import Services from './pages/Services'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Cartpage from './pages/Cartpage'
+import Singlepage from './pages/Singlepage'
 const App = () => {
   return (
     <>  
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/cart' element={<Cartpage/>}/>
+        <Route path='/singlepage' element={<Singlepage/>}/>
       </Routes>
     </BrowserRouter>
     

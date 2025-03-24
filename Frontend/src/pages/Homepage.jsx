@@ -20,18 +20,18 @@ const Homepage = () => {
           cardData && cardData.map((data,index)=>(
               <div className='col-md-4 my-3' key={index}>
                 <div className='card p-3'style={{width:"20rem"}} >
-                    <img src={data.img} alt="" />
+                    <img src={data.img} alt="" className='image'/>
                      <hr />
                         <div className='card-body'>
                           <div>
-                          <h1>Name:{data.name}</h1>
+                          <h3>Name:{data.name}</h3>
                           </div>
 
                         <div>
-                            <h1>Price:{data.price}</h1>
+                            <h3>Price:{data.price}</h3>
                         </div>
                         <div>
-                          <h1>Aailable:{data.onstock}</h1>
+                          <h3>Aailable:{data.onstock}</h3>
                         </div>
                         <div>
                         <button className='btn btn-success' onClick={()=>sendcartData(data)}>Add to cart</button>
