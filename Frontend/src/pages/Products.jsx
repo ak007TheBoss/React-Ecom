@@ -4,6 +4,7 @@ import '../css/products.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartdata, sum } from '../slices/cartsumSlice'
 import { Link } from 'react-router-dom'
+import { showsingleData } from '../slices/singlepageSlice'
 const Products = () => {
 
   const cardData = useSelector((state)=>state.carddatashow.showData)
@@ -19,9 +20,9 @@ const Products = () => {
     console.log("yessir")
   }
 
-  const cardclick=()=>[
-    console.log("card clicked")
-  ]
+      const singleData = (data)=>{
+        dispatch(showsingleData(data))
+      }
   return (
     <>
 
@@ -80,8 +81,11 @@ const Products = () => {
                             <div>
                               <h5>Aailable:{data.onstock}</h5>
                             </div>
-                            <div>
+                            <div className='d-flex justify-content-start'>
                             <button className='btn btn-success' onClick={()=>sendcartData(data)}>Add to cart</button>
+                            <Link to="/singlepage">
+                            <button className='btn btn-secondary ms-2' onClick={()=>singleData(data)}>View More</button>
+                            </Link>
                             </div>
                             </div>
                     </div>

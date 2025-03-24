@@ -3,11 +3,16 @@ import Navbarcomponent from '../components/Navbarcomponent'
 import '../css/homepage.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { sum,cartdata } from '../slices/cartsumSlice'
+import { Link } from 'react-router-dom'
+import { showsingleData } from '../slices/singlepageSlice'
 const Homepage = () => {
     const dispatch = useDispatch()
     const sendcartData =(data)=>{
       dispatch(sum(1))
       dispatch(cartdata(data))
+    }
+    const singleData = (data)=>{
+      dispatch(showsingleData(data))
     }
 
     const cardData = useSelector((state)=>state.carddatashow.showData)
@@ -33,8 +38,12 @@ const Homepage = () => {
                         <div>
                           <h3>Aailable:{data.onstock}</h3>
                         </div>
-                        <div>
+                        <div className='d-flex justify-content-start'>
                         <button className='btn btn-success' onClick={()=>sendcartData(data)}>Add to cart</button>
+                        <Link to="/singlepage">
+                        <button className='btn btn-secondary ms-2' onClick={()=>singleData(data)}>View More</button>
+                        </Link>
+                        
                         </div>
                         </div>
                 </div>

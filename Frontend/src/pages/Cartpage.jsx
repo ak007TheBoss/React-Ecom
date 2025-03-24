@@ -38,16 +38,21 @@ const Cartpage = () => {
                                         <td>{data.price}</td>
                                         <td>{data.onstock}</td>
                                         <td>
-                                            <div className='d-flex justify-content-evenly mb-3'>
-                                            <button className='btn btn-secondary p-3' key={index} onClick={addquantity}>+</button>
-                                            <p>{quantity}</p>
-                                            <button className={`btn ${quantity > 0 ? "btn-secondary" : "btn-secondary disabled"}`} key={index} onClick={subquantity} >-</button>
-                                            </div>
+                                            <div className='p-3'>
+                                                    <h3>No. Items,</h3>
+                                                    <div className='d-flex justify-content-start'>
+                                                    <button className='btn btn-secondary me-2' onClick={addquantity}>+</button>
+                                                    <h5>{quantity}</h5>
+                                                    <button className={`btn ms-2 ${quantity > 0 ? "btn-secondary" : "btn-secondary disabled"}`} onClick={subquantity} >-</button>
+                                                    </div>
+                                             </div>
+
                                             <div className='mb-3'>
-                                            <button className='btn btn-success ms-3 '>Buy Now</button>
-                                            <button className='btn btn-danger ms-3 '>Remove</button>
+                                                    <button className='btn btn-success ms-3 '>Buy Now</button>
+                                                    <button className='btn btn-danger ms-3 '>Remove</button>
                                             </div>
                                         </td>
+
                                     </tr>
                                 )
                                 )
