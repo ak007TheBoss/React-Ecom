@@ -12,3 +12,6 @@ const searchSlice = createSlice({
         }
     }
 })
+
+export const{searchedData} = searchSlice.actions
+export default searchSlice.reducer
