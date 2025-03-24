@@ -56,7 +56,7 @@ const pushdataSLice = createSlice({
             {
                 id:7,
                 name:"Fantech WGC1 Venom",
-                price: "10000",
+                price: "$15",
                 onstock: "2 Left",
                 img: "https://fantech.ph/wp-content/uploads/2019/11/fantech-wgc1.jpg",
                 details:"mouse"
@@ -64,7 +64,7 @@ const pushdataSLice = createSlice({
             {
                 id:8,
                 name:"Red Magic Nubia",
-                price: "10000",
+                price: "$20",
                 onstock: "Yes",
                 img: "https://cdn.gadgetbytenepal.com/wp-content/uploads/2022/07/Nubia-RedMagic-Gaming-Keyboard.jpg",
                 details:"mouse"
@@ -72,7 +72,7 @@ const pushdataSLice = createSlice({
             {
                 id:9,
                 name:"Red Dragon Dagger-2",
-                price: "10000",
+                price: "$25",
                 onstock: "No",
                 img: "https://redragonadria.com/wp-content/uploads/2021/03/M715-1%E2%95%95%E2%96%92%E2%96%92%E2%95%9B.jpg",
                 details:"mouse"
