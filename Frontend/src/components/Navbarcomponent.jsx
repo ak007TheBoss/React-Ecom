@@ -1,20 +1,33 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from '../imgs/logo.jpg'
 import { searched } from '../slices/pushdataSlice'
 const Navbarcomponent = () => {
   const cartnum = useSelector((state)=>state.cartsum.cartnum)
   const searchData = useSelector((state)=>state.carddatashow.showData)
-  const [display,showDisplay] = useState()
-  
-  const showedDisplay=(e)=>{
+  const [display,showDisplay] = useState('')
 
+  const navigate = useNavigate();
+  const sendData = ()=>{ 
+    if(display){
+    navigate("/searchdata", {state:"hello"})
+    }
+    console.log("nav",display)
+
+  }
+
+  const showedDisplay=(e)=>{
     showDisplay(e)
-    console.log(display)
+    // console.log(display)
     showDisplay('')
+    sendData()
+    
   }
   
+
+
+
   return (
     <>
     <div className=' container-fluid bg-black'>

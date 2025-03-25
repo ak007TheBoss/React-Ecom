@@ -1,9 +1,14 @@
 import React from 'react'
 import Navbarcomponent from '../components/Navbarcomponent'
 import { useSelector } from 'react-redux'
+import { useLocation } from 'react-router-dom'
 
 const SearchDatapage = () => {
 
+    const location = useLocation()
+    const data = location.state
+
+    console.log("searchpage",location)
     const searchdatas = () =>{
         console.log("button")
         }
