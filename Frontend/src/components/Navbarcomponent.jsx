@@ -1,9 +1,20 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import logo from '../imgs/logo.jpg'
+import { searched } from '../slices/pushdataSlice'
 const Navbarcomponent = () => {
   const cartnum = useSelector((state)=>state.cartsum.cartnum)
+  const searchData = useSelector((state)=>state.carddatashow.showData)
+  const [display,showDisplay] = useState()
+  
+  const showedDisplay=(e)=>{
+
+    showDisplay(e)
+    console.log(display)
+    showDisplay('')
+  }
+  
   return (
     <>
     <div className=' container-fluid bg-black'>
@@ -51,16 +62,13 @@ const Navbarcomponent = () => {
               
             </div>
             <div className='col-md-4 d-flex justify-content-evenly my-3'>
-               <input type="text" name="" id="" placeholder='Search' className='form-control mx-2'/>
-              <Link to="/searchdata"><button className='btn btn-success'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
+               <input type="text" name="" id="" placeholder='Search' className='form-control mx-2' onChange={(e)=>showDisplay(e.target.value)} value={display}/>
+              <Link to="/searchdata"><button className='btn btn-success' onClick={showedDisplay}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
             </svg></button></Link>
             </div>
             <div className='col-md-4 my-3 d-flex justify-content-end'>
              <Link to='/cart'> <button className='btn btn-success'>Cart : {cartnum}</button></Link>
-          {/* <div className="relative w-10 h-10 flex items-center justify-center">
-              <CartIcon/>
-            </div> */}
             </div>
           
         </div>

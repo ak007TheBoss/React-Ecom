@@ -117,8 +117,15 @@ const pushdataSLice = createSlice({
             
         ],
         
+        searchedData:[]
+    },
+    reducers:{
+        searched:(state,actions)=>{
+            console.log(actions.payload)
+            state.searchedData.push(actions.payload)
+        }
     }
 
 })
-export const {}=pushdataSLice.actions
+export const {searched}=pushdataSLice.actions
 export default pushdataSLice.reducer

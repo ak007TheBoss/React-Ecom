@@ -1,7 +1,13 @@
 import React from 'react'
 import Navbarcomponent from '../components/Navbarcomponent'
+import { useSelector } from 'react-redux'
 
 const SearchDatapage = () => {
+
+    const searchdatas = () =>{
+        console.log("button")
+        }
+    const displayData = useSelector((state)=>state.carddatashow.searchedData)
   return (
     <>
     <Navbarcomponent/>
@@ -39,6 +45,40 @@ const SearchDatapage = () => {
             </div>
           </div>
 
+          <div className='col-md-9'>
+            <div className='row'>
+            {
+              displayData && displayData.map((data,index)=>(
+                  <div className='col-md-4 my-3' key={index}>
+                  <div className='card p-3'style={{width:"15rem"}}>
+                        <img src={data.img} alt="" style={{height:"200px",width:"100%"}}/>
+                        <hr />
+                            <div className='card-body'>
+                              <div>
+                              <h5>Name:{data.name}</h5>
+                              </div>
+
+                            <div>
+                                <h5>Price:{data.price}</h5>
+                            </div>
+                            <div>
+                              <h5>Aailable:{data.onstock}</h5>
+                            </div>
+                            <div className='d-flex justify-content-start'>
+                            <button className='btn btn-success' onClick={()=>sendcartData(data)}>Add to cart</button>
+                            <Link to="/singlepage">
+                            <button className='btn btn-secondary ms-2' onClick={()=>singleData(data)}>View More</button>
+                            </Link>
+                            </div>
+                            </div>
+                    </div>
+                  </div>      
+              
+          ))
+
+          }
+            </div>
+          </div>
           </div>
       </div>
     </>
