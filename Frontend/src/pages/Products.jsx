@@ -10,7 +10,7 @@ const Products = () => {
   const [searchData,setSearchData] = useState("")
   const cardData = useSelector((state)=>state.carddatashow.showData)
   const [searchproducts,setSearchProducts] = useState(cardData)
-  
+  const [buttonSearch,setbuttonSearch] = useState(cardData)
   const dispatch = useDispatch()
   const sendcartData =(data)=>{
     dispatch(sum(1))
@@ -30,7 +30,7 @@ const Products = () => {
       }
   return (
     <>
-
+      
       <Navbarcomponent/>
       <div className='container'>
         <div className='row'>
@@ -101,7 +101,7 @@ const Products = () => {
             </div>
           </div>
           </div>
-          </div>
+      </div>
 
     </>
 
