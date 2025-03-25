@@ -3,7 +3,7 @@ import Navbarcomponent from '../components/Navbarcomponent'
 import '../css/products.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartdata, sum } from '../slices/cartsumSlice'
-import { Link } from 'react-router-dom'
+import { data, Link } from 'react-router-dom'
 import { showsingleData } from '../slices/singlepageSlice'
 
 const Products = () => {
@@ -28,6 +28,13 @@ const Products = () => {
       const singleData = (data)=>{
         dispatch(showsingleData(data))
       }
+      const clicked=(data)=>{
+      console.log(data)
+      let filterData = cardData.filter(d=>
+        d.product.toLowerCase().includes(data.toLowerCase())
+      )
+      setSearchProducts(filterData)
+}
   return (
     <>
       
@@ -47,20 +54,22 @@ const Products = () => {
               <h1 className='text-center'>Categories</h1>
               <hr />
               <div>
-                <div className='d-flex justify-content-evenly mb-2'>
-                <p>Monitors</p>
+
+                <div className='d-flex justify-content-evenly mb-3'>
+                <button className='btn btn-secondary btn-lg' onClick={()=>clicked("Monitor")}>Monitors</button>
                 </div>
-                <div className='d-flex justify-content-evenly mb-2'>
-                <p>Laptops</p>
+
+                <div className='d-flex justify-content-evenly mb-3'>
+                <button className='btn btn-secondary btn-lg'>Laptop</button>
                 </div>
-                <div className='d-flex justify-content-evenly mb-2'>
-                <p>Mouse</p>
+                <div className='d-flex justify-content-evenly mb-3'>
+                <button className='btn btn-secondary btn-lg'>Mouse</button>
                 </div>
-                <div className='d-flex justify-content-evenly mb-2'>
-                <p>Keyboards</p>
+                <div className='d-flex justify-content-evenly mb-3'>
+                <button className='btn btn-secondary btn-lg'>Keyboards</button>
                 </div>
-                <div className='d-flex justify-content-evenly mb-2'>
-                <p>Accessories</p>
+                <div className='d-flex justify-content-evenly mb-3'>
+                  <button className='btn btn-secondary btn-lg mb-3'>Accessories</button>
                 </div>
               </div>
             </div>

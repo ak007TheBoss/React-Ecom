@@ -113,7 +113,33 @@ const pushdataSLice = createSlice({
                 specifications:"this is a product",
                 product: "keyboard"
             },
-
+            {
+                id:13,
+                name:"Dragon Theme Deskmat",
+                price: "$10",
+                onstock: "yes",
+                img: "https://www.drakvane.com/cdn/shop/files/preview_images/Sb97ae8bc45744ed59cd78e1ef56534f7q_600x600_crop_center.webp?v=1735600787",
+                specifications:"this is a product",
+                product: "accessories"
+            },
+            {
+                id:14,
+                name:"Coiled C-Cable",
+                price: "$5",
+                onstock: "no",
+                img: "https://cdn.cablemod.com/wp-content/uploads/2021/11/Midnight-Black_Classic_Amazon-1.jpg",
+                specifications:"this is a product",
+                product: "accessories"
+            },
+            {
+                id:15,
+                name:"Keycaps with remover",
+                price: "$60",
+                onstock: "no",
+                img: "https://m.media-amazon.com/images/I/71FSIp+tDNL._AC_UF894,1000_QL80_.jpg",
+                specifications:"this is a product",
+                product: "accessories"
+            },
             
         ],
         
