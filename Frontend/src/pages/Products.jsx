@@ -10,7 +10,6 @@ const Products = () => {
   const [searchData,setSearchData] = useState("")
   const cardData = useSelector((state)=>state.carddatashow.showData)
   const [searchproducts,setSearchProducts] = useState(cardData)
-  const [buttonSearch,setbuttonSearch] = useState(cardData)
   const dispatch = useDispatch()
   const sendcartData =(data)=>{
     dispatch(sum(1))
@@ -19,7 +18,6 @@ const Products = () => {
   const searchdatas = () =>{
     let filterData = cardData.filter(data=>
       data.name.toLowerCase().includes(searchData.toLowerCase())
-
     )
     setSearchProducts(filterData)
     setSearchData('')
@@ -29,7 +27,6 @@ const Products = () => {
         dispatch(showsingleData(data))
       }
       const clicked=(data)=>{
-      console.log(data)
       let filterData = cardData.filter(d=>
         d.product.toLowerCase().includes(data.toLowerCase())
       )
@@ -54,22 +51,23 @@ const Products = () => {
               <h1 className='text-center'>Categories</h1>
               <hr />
               <div>
-
                 <div className='d-flex justify-content-evenly mb-3'>
-                <button className='btn btn-secondary btn-lg' onClick={()=>clicked("Monitor")}>Monitors</button>
-                </div>
-
-                <div className='d-flex justify-content-evenly mb-3'>
-                <button className='btn btn-secondary btn-lg'>Laptop</button>
+                <button className='btn btn-secondary btn-lg' onClick={()=>clicked("")}>All</button>
                 </div>
                 <div className='d-flex justify-content-evenly mb-3'>
-                <button className='btn btn-secondary btn-lg'>Mouse</button>
+                <button className='btn btn-secondary btn-lg' onClick={()=>clicked("monitor")}>Monitors</button>
                 </div>
                 <div className='d-flex justify-content-evenly mb-3'>
-                <button className='btn btn-secondary btn-lg'>Keyboards</button>
+                <button className='btn btn-secondary btn-lg' onClick={()=>clicked("laptop")}>Laptop</button>
                 </div>
                 <div className='d-flex justify-content-evenly mb-3'>
-                  <button className='btn btn-secondary btn-lg mb-3'>Accessories</button>
+                <button className='btn btn-secondary btn-lg' onClick={()=>clicked("mouse")}>Mouse</button>
+                </div>
+                <div className='d-flex justify-content-evenly mb-3'>
+                <button className='btn btn-secondary btn-lg' onClick={()=>clicked("keyboard")}>Keyboards</button>
+                </div>
+                <div className='d-flex justify-content-evenly mb-3'>
+                  <button className='btn btn-secondary btn-lg mb-3' onClick={()=>clicked("accessories")}>Accessories</button>
                 </div>
               </div>
             </div>

@@ -12,7 +12,7 @@ const pushdataSLice = createSlice({
                 onstock: "Yes",
                 img: "https://dlcdnwebimgs.asus.com/gain/EA5F4487-87F4-47AC-B06F-EC1C95C0E59E/w717/h525",
                 specifications:"this is a product",
-                product:"Monitor"
+                product:"monitor"
             },
             {
                 id:2,
@@ -21,7 +21,7 @@ const pushdataSLice = createSlice({
                 onstock: "Out of Stock",
                 img: "https://mudita.com.np/media/catalog/product/cache/036aa47742df3225beb764097d8b4fe8/m/s/msi-g255f-monitor-price-in-nepal.webp",
                 specifications:"this is a product",
-                product:"Monitor"
+                product:"monitor"
             },
             {
                 id:3,
@@ -30,7 +30,7 @@ const pushdataSLice = createSlice({
                 onstock: "Yes",
                 img: "https://m.media-amazon.com/images/I/71KYyiUlMPL.jpg",
                 specifications:"this is a product",
-                product:"Monitor"
+                product:"monitor"
             },
             {
                 id:4,
@@ -39,7 +39,7 @@ const pushdataSLice = createSlice({
                 onstock: "Yes",
                 img: "https://mudita.com.np/media/catalog/product/cache/5f4a658faeee583187031a67361d4d52/a/s/asus-rog-strix-scar-15-price-in-nepal.webp",
                 specifications:"this is a product",
-                product:"Laptop"
+                product:"laptop"
             },
             {
                 id:5,
@@ -48,7 +48,7 @@ const pushdataSLice = createSlice({
                 onstock: "Yes",
                 img: "https://mudita.com.np/media/catalog/product/cache/5f4a658faeee583187031a67361d4d52/a/c/acer-nitro-v-15-i5-4060-price-in-nepal.webp",
                 specifications:"this is a product",
-                product:"Laptop"
+                product:"laptop"
             },
             {
                 id:6,
@@ -57,7 +57,7 @@ const pushdataSLice = createSlice({
                 onstock: "1 left",
                 img: "https://mudita.com.np/media/catalog/product/cache/5f4a658faeee583187031a67361d4d52/l/e/lenovo-legion-16irx9-price-in-nepal_1.webp",
                 specifications:"this is a product",
-                product:"Laptop"
+                product:"laptop"
             },            
             {
                 id:7,
@@ -133,10 +133,10 @@ const pushdataSLice = createSlice({
             },
             {
                 id:15,
-                name:"Keycaps with remover",
-                price: "$60",
+                name:"Keycaps remover",
+                price: "$5",
                 onstock: "no",
-                img: "https://m.media-amazon.com/images/I/71FSIp+tDNL._AC_UF894,1000_QL80_.jpg",
+                img: "https://img.fruugo.com/product/6/48/223378486_max.jpg",
                 specifications:"this is a product",
                 product: "accessories"
             },
